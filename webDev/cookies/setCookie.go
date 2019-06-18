@@ -1,0 +1,30 @@
+package main
+
+import (
+        "fmt"
+        "net/http"
+)
+
+func main() {
+        http.HandleFunc("/", set)
+        http.HandleFunc("/read", read)
+        http.Handle("/favicon.ico",http.NotFoundHandler())
+        http.ListenAndServe(":8080", nil)
+}
+
+func set(res http.ResponseWriter, req *http.Request) {
+        http.SetCookie(res, &http.Cookie{
+                Name: "my-first-cookie",
+                Value: "cookieVal",
+        })
+        fmt.Fprintln(res, "Cookie Written, check browser")
+}
+func read(res http.ResponseWriter, req *http.Request) {
+        c, err := req.Cookie("my-first-cookie")
+        if err != nil {
+                http.Error(res, err.Error(), http.StatusNotFound)
+                return
+        }
+        fmt.Fprintln(res, "Cookie Cookie Cookie:", c)
+
+}

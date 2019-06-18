@@ -1,0 +1,15 @@
+<!Doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello Everyone</title>
+</head>
+<body>
+  <h1>This is my header</h1>
+  <ul>
+  {{range $key, $value := .}}
+    <li>Key - {{$key}}  Value - {{$value}}</li>
+  {{end}}
+  </ul>
+</body>
+</html>

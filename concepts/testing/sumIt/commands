@@ -1,0 +1,11 @@
+Benchmark<FuncName>(b *testing.B) //pointer to testing.B
+Example<FuncName>() // no params
+Test<FuncName>(t *testing.T) //pointer to testing.T
+
+
+godoc -http=:8080
+go test
+go test -bench .
+go test -cover
+go test -coverprofile c.out
+go tool cover -html=c.out

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Workin' IT!</title>
+</head>
+<body>
+  <h1>Menz</h1>
+  <ul>
+    {{range $key, $val := .}}
+    <li>Key - {{$key}}   Value - {{$val}}</li>
+    {{end}}
+  </ul>
+</body>
+</html>

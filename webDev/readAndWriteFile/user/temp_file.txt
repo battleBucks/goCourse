@@ -1,0 +1,75 @@
+line 1
+line 2
+
+line 4
+
+def another_name
+  p "something else"
+end
+
+this is some more text  for me to edit, i'm going to keep typing about nonsense so i have more text to work with.  i don't know how long to go... i guess this is good enough.
+
+can be removed with cit:
+<p>sample inside these tags</p>
+
+ci{ or }, ci '
+function myfunc()
+{
+  console.log('hey');
+  console.log('there');
+}
+
+.rule {
+  font-size: em;
+  color: white;
+  font-family: "raleway";  <<< ci "
+}
+
+
+there are many variations of passages of lorem ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. if you are going to use a passage of lorem ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. all the lorem ipsum generators on the internet tend to repeat predefined chunks as necessary, making this the first true generator on the internet. it uses a dictionary of over 200 latin words, combined with a handful of model sentence structures, to generate lorem ipsum which looks reasonable. the generated lorem ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+
+def sample_name
+  puts "there are m"
+end
+
+*********************visual mode commands!
+enter with 'v' (or 'v' for whole line)
+do things like you do in command mode
+
+*********************copy past from clipboard
+:set paste -> then paste
+"+p        -> calls set paste
+
+:g/#/d -> will delete all commented lines!
+
+ggVG will select everything
+dg will delete everything below where we at
+
+def another_name
+  typing stuff to search here.  In this function
+end
+
+
+to find and replace:
+enter command mode, percent 's' for search, followed by regex and then what you want to change it to
+
+:%s/MyCla.ss/AwesomeClass
+mc = AwesomeClass.new
+mc = AwesomeClass.new
+mc = AwesomeClass.new
+mc = AwesomeClass.new
+mc = AwesomeClass.new
+mc = AwesomeClass.new
+
+ctrl + v, select lines, capital I, # + space, esc does a code block in ruby
+  - enter visual block mode, capital I enters insert, hit the comment and space, escape out and it cascades down
+
+Manually indent in vim  => one line hit shift >> done
+    to do multiple lines, enter visual mode first.
+  "sample"
+  "another sample"
+    "to be indented"
+    "also to be indented"
+  "not to be indented"
+end
+
